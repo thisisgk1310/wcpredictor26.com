@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@400;900&display=swap');
+
+.hero-viewport {
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(30, 58, 138, 0.8)), 
+                url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.cool-heading { 
+    font-family: 'Syncopate', sans-serif; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5em; 
+    background: linear-gradient(to right, #fff 20%, #ef4444 50%, #fff 80%); 
+    background-size: 200% auto; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    animation: shine 5s linear infinite; 
+}
+
+@keyframes shine { to { background-position: 200% center; } }
+
+.snapshot-heading { 
+    background: none !important; 
+    -webkit-text-fill-color: white !important; 
+    color: white !important; 
+    animation: none !important; 
+}
+
+#knockout-section { 
+    display: none; 
+    padding: 40px 20px; 
+    width: fit-content; 
+    min-width: 1550px; 
+    margin: 0 auto; 
+}
+
+#capture-area { 
+    background-color: #0a0f1e; 
+    padding: 60px 40px; 
+}
+
+.bracket-grid { 
+    display: grid; 
+    grid-template-columns: 1.2fr 1fr 0.8fr 0.8fr 1.5fr 0.8fr 0.8fr 1fr 1.2fr; 
+    gap: 15px; 
+    align-items: center; 
+}
+
+.column { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    min-height: 950px; 
+}
+
+.match-box { 
+    background: rgba(255,255,255,0.03); 
+    border: 1px solid rgba(255,255,255,0.1); 
+    border-radius: 4px; 
+    overflow: hidden; 
+}
+
+.team-row { 
+    display: flex; 
+    align-items: center; 
+    padding: 8px 12px; 
+    cursor: pointer; 
+    font-weight: 800; 
+    font-size: 11px; 
+    height: 38px; 
+    color: white; 
+    border-bottom: 1px solid rgba(255,255,255,0.05); 
+}
+
+.winner-active { background: #ef4444 !important; }
+
+.flag { 
+    width: 22px; 
+    height: 15px; 
+    object-fit: cover; 
+    margin-right: 10px; 
+    border-radius: 2px; 
+}
+
+.qualifier-border { border-left: 6px solid #ef4444 !important; }
+
+.hidden-section { display: none !important; }
+
+.wildcard-card { transition: all 0.3s ease; }
+
+/* Responsive Bracket Scaling */
+@media screen and (max-width: 1550px) {
+    #knockout-section {
+        transform: scale(0.6);
+        transform-origin: top center;
+    }
+}
